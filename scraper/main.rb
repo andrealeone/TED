@@ -6,11 +6,11 @@ require 'nokogiri'
 require 'tty-prompt'
 require 'active_support'
 require 'active_record'
-require 'byebug'
+require 'irb'
 
 module TED_Scraper
 
-  Base_URI = 'https://www.ted.com/talks/'
+  Base_URI = 'https://www.ted.com/talks'
 
   Routines =  Dir.entries('./routines/')
     .map { |slug| slug[0..-4] if slug[-2..-1] == 'rb' }

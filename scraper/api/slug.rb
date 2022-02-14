@@ -15,9 +15,9 @@ module TED_Scraper::Slug
         href = a.attributes['href'].value
 
         if href[0..6] == '/talks/'
-          puts href
           unless SlugRecord.exists? (slug = href[7..])
             SlugRecord.create key: slug, scraped: false
+            puts href
           end
         end
 
